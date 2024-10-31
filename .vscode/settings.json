@@ -1,0 +1,16 @@
+{
+    "background.enabled": true,
+    "background.customImages": [
+            "file:///C:/Users/attitude/Downloads/picture/eezcapge3b4.jpg"
+        ],
+        "background.styles": [
+            {
+                "opacity": 0.5,  // 透明度 (0-1之间，0为完全透明)
+                "position": "absolute",  // 背景定位
+                "zIndex": -1,  // 确保背景在其他内容下方
+                "backgroundSize": "cover"  // 背景图片覆盖整个区域
+            }
+        ],
+        "backgroundCover.opacity": 0.5,
+        "background.customImageFolders": []
+}
