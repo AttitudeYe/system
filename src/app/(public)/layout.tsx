@@ -94,11 +94,11 @@ const App = (props: any) => {
           message.success(res.message)
           setVisible(false)
           router.push('/signIn')
-        } 
+        }
         else {
           message.error(res.message)
           console.log(1111);
-          
+
         }
       })
   }
@@ -116,15 +116,44 @@ const App = (props: any) => {
               icon: <UserOutlined />,
               label: <Link href='/notice'>公告信息</Link>,
             },
+            // {
+            //   key: 'student',
+            //   icon: <VideoCameraOutlined />,
+            //   label: <Link href='/student'>学生信息</Link>,
+            // },
             {
-              key: 'student',
+              key: 'club',
               icon: <VideoCameraOutlined />,
-              label: <Link href='/student'>学生信息</Link>,
+              label: <Link href='/club'>社团信息</Link>,
+              children: [
+                {
+                  key: 'club',
+                  label: <Link href='/club'>社团列表</Link>,
+                },
+                {
+                  key: 'member',
+                  label: <Link href='/member'>成员列表</Link>,
+                },
+                {
+                  key: 'activity',
+                  label: <Link href='/activity'>活动列表</Link>,
+                },
+              ]
             },
             {
-              key: 'users',
+              key: 'userss',
               icon: <UploadOutlined />,
-              label: <Link href='/users'>基本信息</Link>,
+              label: <Link href='/userss'>个人信息</Link>,
+              children: [
+                {
+                  key: 'users',
+                  label: <Link href='/users'>基本信息</Link>,
+                },
+                {
+                  key: 'schoolRecord',
+                  label: <Link href='/schoolRecord'>学籍管理</Link>,
+                }
+              ]
             },
             {
               key: 'course',

@@ -14,7 +14,7 @@ const logIn = async (formData: FormData) => {
       }
     }
 
-    const result = await fetch('/api/logIn', {
+    const result = await fetch('/api/v2/user/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
